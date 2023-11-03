@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="CandelarioRamosj">
+  <meta name="description" content="El juego clasico del ahorcado con HTML, CSS y JS">
+  <meta name="keywords" content="HTML, HTML5, CSS, JS, Juego ahorcado">
+  <!-- Titulo -->
+  <title>Juego del ahorcado</title>
+  <!-- Icono -->
+  <link rel="icon" href="recursos/icon/icono.png" type="image/x-icon">
+  <!-- Iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/e9fc205181.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Juego del ahorcado.</h1>
+  </header>
+  <main>
+    <section id="inicial">
+      <div id="inicial-1">
+        <h2>Seleccione una categoria antes de empezar.</h2>
+        <div class="categorias">
+          <input type="radio" name="radio_categoria" id="r_aleatorio" value="aleatorio">
+          <label for="r_aleatorio">
+            <i class="fa-solid fa-question"></i>
+            Aleatorio
+          </label>
+          <input type="radio" name="radio_categoria" id="r_animales" value="animales">
+          <label for="r_animales">
+            <i class="fa-solid fa-hippo"></i>
+            Animales
+          </label>
+          <input type="radio" name="radio_categoria" id="r_plantas" value="plantas">
+          <label for="r_plantas">
+            <i class="fa-brands fa-pagelines"></i>
+            Plantas
+          </label>
+          <input type="radio" name="radio_categoria" id="r_trabajos" value="trabajos">
+          <label for="r_trabajos">
+            <i class="fa-solid fa-briefcase"></i>
+            Trabajos
+          </label>
+          <input type="radio" name="radio_categoria" id="r_cosas" value="cosas">
+          <label for="r_cosas">
+            <i class="fa-solid fa-motorcycle"></i>
+            Cosas
+          </label>
+        </div>
+      </div>
+      <div id="inicial-2">
+        <button type="button" title="Iniciar"><i class="fa-solid fa-play"></i></button>
+        <label>Iniciar</label>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="https://www.freepik.es/icono/horca_5835868#fromView=keyword&term=Ahorcado&page=1&position=24" target="_blank" rel="noopener noreferrer">Icono de Freepik</a>
+  </footer>
+</body>
+</html>
