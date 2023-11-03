@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aqua;
+}
+
+header {
+  background-color: red;
+  display: grid;
+  place-content: end center;
+  text-align: center;
+  height: 20vh;
+}
+
+main {
+  background-color: blueviolet;
+}
+
+#inicial {
+  height: 80vh;
+}
+
+#inicial-1 {
+  background-color: green;
+  height: 35%;
+}
+
+#inicial-1 > h2 {
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.categorias {
+  background-color: aqua;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(5, 7vw);
+  grid-template-rows: repeat(2, 6vw);
+}
+
+label {
+  text-align: center;
+}
+
+label > i {
+  grid-row: 1;
+  font-size: 2vw;
+  background-color: violet;
+  border-radius: 50%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  height: 2vw;
+  width: 4vw;
+}
+
+input[type="radio"]{
+  grid-row: 2;
+  height: 20%;
+  opacity: 0;
+}
+
+#inicial-2 {
+  background-color: yellow;
+  height: 65%;
+  display: grid;
+  place-content: center;
+}
