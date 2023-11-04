@@ -15,6 +15,44 @@
   --letraInicio: 'Lilita One', sans-serif;
   --letraGeneral: 'Onest', sans-serif;
 }
+/* Scroll */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FEEDBF #FEEDBF;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #FEEDBF;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #FEEDBF;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #FEEDBF;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #FEEDBF;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #259B9B;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #6FBCAA;
+}
+/* Scroll */
 
 body {
   background-color: var(--color1);
@@ -39,7 +77,8 @@ header {
 
 #inicial {
   height: 75vh;
-  border: 0.3vw var(--color4) solid;
+  border-top: 0.3vw var(--color4) solid;
+  border-bottom: 0.3vw var(--color4) solid;
 }
 
 #inicial-1 {
