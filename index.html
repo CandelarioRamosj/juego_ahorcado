@@ -15,15 +15,32 @@
   <script src="https://kit.fontawesome.com/e9fc205181.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="recursos/css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Onest:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Juego del ahorcado.</h1>
+    <!-- Se agregaron los span para poder dar el estilo del juego a la palabra -->
+    <h1>Juego del 
+      <span class="span-header">a</span>
+      <span class="span-header">h</span>
+      <span class="span-header">o</span>
+      <span class="span-header">r</span>
+      <span class="span-header">c</span>
+      <span class="span-header">a</span>
+      <span class="span-header">d</span>
+      <span class="span-header">o</span>
+    </h1>
   </header>
   <main>
+    <!-- La section inicial sera la pantalla que se vera al iniciar la pagina, posteriormente se ocultara -->
     <section id="inicial">
+      <!-- El div inicial-1 contiene las categorias del juego -->
       <div id="inicial-1">
         <h2>Seleccione una categoria antes de empezar.</h2>
+        <!-- Los inputs se ocultaran con css y el elemento i actuara como referencia a que un input esta seleccionado -->
         <div class="categorias">
           <input type="radio" name="radio_categoria" id="r_aleatorio" value="aleatorio">
           <label for="r_aleatorio">
@@ -52,13 +69,14 @@
           </label>
         </div>
       </div>
+      <!-- Este div inicial-2 contiene el boton que dara inicio al juego, debera esta desactivado hasta que se seleccione una categoria -->
       <div id="inicial-2">
-        <button type="button" title="Iniciar"><i class="fa-solid fa-play"></i></button>
-        <label>Iniciar</label>
+        <button type="button" title="Iniciar" id="btn-inicial"><i class="fa-solid fa-play"></i></button>
       </div>
     </section>
   </main>
   <footer>
+    <!-- Se agregan los creditos por los iconos utilizados -->
     <p><small>Iconos de <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a></small></p>
     <p><small><a href="https://www.freepik.es/icono/horca_5835868#fromView=keyword&term=Ahorcado&page=1&position=24" target="_blank" rel="noopener noreferrer">Icono de Freepik</a></small></p>
   </footer>
