@@ -78,6 +78,7 @@ header {
 }
 
 #inicial {
+  display: block;
   height: 75vh;
   border-top: 0.3vw var(--color4) solid;
   border-bottom: 0.3vw var(--color4) solid;
@@ -171,6 +172,16 @@ input[type="radio"]{
   transform: translateY(10px);
   box-shadow: 0 5px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
   color: var(--color5);
+}
+
+#pantalla-juego {
+  /*? display: none; No funciona (no lo he revisado porque) asi que lo agrege al html */
+  height: 75vh;
+  border-top: 0.3vw var(--color4) solid;
+  border-bottom: 0.3vw var(--color4) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
