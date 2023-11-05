@@ -57,6 +57,8 @@
 body {
   background-color: var(--color1);
   color: var(--color4);
+  /* Impedir que se seleccionen los textos */
+  user-select: none;
 }
 
 header {
@@ -100,6 +102,10 @@ header {
 }
 
 label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-family: var(--letraGeneral);
 }
