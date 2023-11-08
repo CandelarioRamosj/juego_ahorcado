@@ -74,10 +74,60 @@
         <button tabindex="-1" type="button" title="Iniciar" id="btn-inicial"><i class="fa-solid fa-play"></i></button>
       </div>
     </section>
+    <!-- Segunda pantalla que actuara como la pantalla del juego -->
     <section id="pantalla-juego" style="display: none;">
+      <!-- Parte superor de la pantalla del juego donde se mostrara la puntuacion y otros elementos -->
       <div class="barra-juego">
-        <button tabindex="-1" type="button" title="volver" id="btn-volver"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <div class="btn-barra">
+          <button tabindex="-1" type="button" title="volver" id="btn-volver"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <button tabindex="-1" type="button" title="reiniciar" id="btn-reiniciar"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+        <div class="categoria-juego">
+          <p>Categoria: <span id="span-categotia"></span></p>
+        </div>
+        <div class="puntos">
+          <i class="fa-solid fa-trophy"></i>
+          <label id="puntuacion">
+            
+          </label>
+        </div>
       </div>
+      <div class="pantalla-respuestas">
+      <div class="respuesta-juego">
+        <span>Jasas</span>
+      </div>
+      <div class="abecedario">
+        <button tabindex="-1" type="button" class="letra">Q</button>
+        <button tabindex="-1" type="button" class="letra">W</button>
+        <button tabindex="-1" type="button" class="letra">E</button>
+        <button tabindex="-1" type="button" class="letra">R</button>
+        <button tabindex="-1" type="button" class="letra">T</button>
+        <button tabindex="-1" type="button" class="letra">Y</button>
+        <button tabindex="-1" type="button" class="letra">U</button>
+        <button tabindex="-1" type="button" class="letra">I</button>
+        <button tabindex="-1" type="button" class="letra">O</button>
+        <button tabindex="-1" type="button" class="letra">P</button>
+        <button tabindex="-1" type="button" class="letra">A</button>
+        <button tabindex="-1" type="button" class="letra">S</button>
+        <button tabindex="-1" type="button" class="letra">D</button>
+        <button tabindex="-1" type="button" class="letra">F</button>
+        <button tabindex="-1" type="button" class="letra">G</button>
+        <button tabindex="-1" type="button" class="letra">H</button>
+        <button tabindex="-1" type="button" class="letra">J</button>
+        <button tabindex="-1" type="button" class="letra">K</button>
+        <button tabindex="-1" type="button" class="letra">L</button>
+        <button tabindex="-1" type="button" class="letra">Z</button>
+        <button tabindex="-1" type="button" class="letra">X</button>
+        <button tabindex="-1" type="button" class="letra">C</button>
+        <button tabindex="-1" type="button" class="letra">V</button>
+        <button tabindex="-1" type="button" class="letra">B</button>
+        <button tabindex="-1" type="button" class="letra">N</button>
+        <button tabindex="-1" type="button" class="letra">M</button>
+      </div>
+      </div>
+        <div class="ahorcado-elem">
+          <img src="recursos/img/JuegoInicio.png" alt="Imagen del juego" draggable="false" oncontextmenu="return false;" />
+        </div>
     </section>
   </main>
   <footer>
