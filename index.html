@@ -35,6 +35,7 @@
     </h1>
   </header>
   <main>
+
     <!-- La section inicial sera la pantalla que se vera al iniciar la pagina, posteriormente se ocultara -->
     <section id="inicial">
       <!-- El div inicial-1 contiene las categorias del juego -->
@@ -42,29 +43,24 @@
         <h2>Seleccione una categoria antes de empezar.</h2>
         <!-- Los inputs se ocultaran con css y el elemento i actuara como referencia a que un input esta seleccionado -->
         <div class="categorias">
-          <input type="radio" name="radio_categoria" id="r_aleatorio" value="aleatorio">
-          <label for="r_aleatorio">
-            <i class="fa-solid fa-question"></i>
+          <label for="r_aleatorio" class="label_categorias">
+            <i class="fa-solid fa-question" id="i_aleatorio"></i>
             <span>Aleatorio</span>
           </label>
-          <input type="radio" name="radio_categoria" id="r_animales" value="animales">
-          <label for="r_animales">
-            <i class="fa-solid fa-hippo"></i>
+          <label for="r_animales" class="label_categorias">
+            <i class="fa-solid fa-hippo" id="i_animales"></i>
             <span>Animales</span>
           </label>
-          <input type="radio" name="radio_categoria" id="r_plantas" value="plantas">
-          <label for="r_plantas">
-            <i class="fa-brands fa-pagelines"></i>
+          <label for="r_plantas" class="label_categorias">
+            <i class="fa-brands fa-pagelines" id="i_plantas"></i>
             <span>Plantas</span>
           </label>
-          <input type="radio" name="radio_categoria" id="r_trabajos" value="trabajos">
-          <label for="r_trabajos">
-            <i class="fa-solid fa-briefcase"></i>
+          <label for="r_trabajos" class="label_categorias">
+            <i class="fa-solid fa-briefcase" id="i_trabajos"></i>
             <span>Trabajos</span>
           </label>
-          <input type="radio" name="radio_categoria" id="r_cosas" value="cosas">
-          <label for="r_cosas">
-            <i class="fa-solid fa-motorcycle"></i>
+          <label for="r_cosas" class="label_categorias">
+            <i class="fa-solid fa-motorcycle" id="i_cosas"></i>
             <span>Cosas</span>
           </label>
         </div>
@@ -74,6 +70,7 @@
         <button tabindex="-1" type="button" title="Iniciar" id="btn-inicial"><i class="fa-solid fa-play"></i></button>
       </div>
     </section>
+
     <!-- Segunda pantalla que actuara como la pantalla del juego -->
     <section id="pantalla-juego" style="display: none;">
       <!-- Parte superor de la pantalla del juego donde se mostrara la puntuacion y otros elementos -->
@@ -95,12 +92,12 @@
 
       <div class="pantalla-respuestas">
       <div class="respuesta-juego">
-        <span class="span_respuesta">P</span>
-        <span class="span_respuesta">R</span>
-        <span class="span_respuesta">U</span>
-        <span class="span_respuesta">E</span>
-        <span class="span_respuesta">B</span>
-        <span class="span_respuesta">A</span>
+        <span class="span_respuesta"></span>
+        <span class="span_respuesta"></span>
+        <span class="span_respuesta"></span>
+        <span class="span_respuesta"></span>
+        <span class="span_respuesta"></span>
+        <span class="span_respuesta"></span>
       </div>
       <div class="abecedario">
         <!-- Se agrupan las letras en div's por cada fila -->
@@ -152,5 +149,6 @@
     <p><small><a tabindex="-1" href="https://www.freepik.es/icono/horca_5835868#fromView=keyword&term=Ahorcado&page=1&position=24" target="_blank" rel="noopener noreferrer">Icono de Freepik</a></small></p>
   </footer>
 <script src="recursos/js/script.js"></script>
+<script src="recursos/js/juego.js"></script>
 </body>
 </html>
