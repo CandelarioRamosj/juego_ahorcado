@@ -6,7 +6,7 @@ let iTrabajos = document.querySelector('#i_trabajos')
 let iCosas = document.querySelector('#i_cosas')
 
 let label = document.getElementsByClassName('label_categorias')
-for(let i = 0; label.length; i++){
+for(let i = 0; i < label.length; i++){
   label[i].addEventListener('click', function(){
     switch(i){
       case 0: 
