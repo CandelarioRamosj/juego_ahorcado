@@ -3,6 +3,7 @@ let letras = document.getElementsByClassName('letra')
 let respuestaCorrecta = 0
 let respuestaIncorrecta = 0
 let contador = 0
+let puntos = 0
 // Se obtiene la referencia de la imagen
 let imagenAhorcado = document.getElementById('imagen_ahorcado');
 
@@ -53,7 +54,8 @@ function juegoDelAhorcado(categoria){
   categoria = categoria.slice(2)
   categoria = categoria.charAt(0).toUpperCase() + categoria.slice(1); //Poner en mayusculas la primera letra
   spanCategoria.textContent = categoria
-
+  //Se inician los puntos
+  puntos = 0
   //Se recupera el array correspondiente
   switch(categoria){
     case 'Animales':
@@ -61,11 +63,20 @@ function juegoDelAhorcado(categoria){
       NuevoArray = Animales.slice()
       nuevoSpan()
     break;
-    case 'Plantas': alert('Plantas')
+    case 'Plantas':
+      //Se copia el array
+      NuevoArray = Plantas.slice()
+      nuevoSpan()
     break;
-    case 'Trabajos': alert('Trabajos')
+    case 'Trabajos':
+      //Se copia el array
+      NuevoArray = Trabajos.slice()
+      nuevoSpan()
     break;
-    case 'Cosas': alert('Cosas')
+    case 'Cosas':
+      //Se copia el array
+      NuevoArray = Cosas.slice()
+      nuevoSpan()
     break;
     case 'Aleatorio': alert('Aleatorio')
     break;
@@ -128,17 +139,17 @@ function juegoDelAhorcado(categoria){
         break;
       }
 
-      //Condicional que evalua si ya se completo la palabra
-      if (respuestaCorrecta == randomElemento.length) {
+      //Condicional que evalua si ya se completo la palabra omitiendo los espacios
+      if (respuestaCorrecta == randomElemento.replace(/ /g, "").length) {
         //Se desactivan las letras para que no se clickee nada
         Array.from(letras).forEach(elemento => elemento.style.pointerEvents = 'none')
+        puntos = puntos + 10
         setTimeout(function() {
           alert('Felicidades')
           //Se llama a la funcion para usar la siguiente palabra
           nuevoSpan()
           //Se llama a una funcion que limpia todo
           limpiarPantalla()
-          
         }, 100); // Espera 1 segundo antes de ejecutar el código dentro de la función
       }
     })
@@ -146,6 +157,8 @@ function juegoDelAhorcado(categoria){
 
 function nuevoSpan(){
   console.log(NuevoArray)
+  //Se agregan los puntos
+  document.getElementById('puntuacion').textContent = puntos
   //Se crea un numero aleatorio para extraer una palabra
   let randomIndex = Math.floor(Math.random() * NuevoArray.length);
   //Extraigo el elemento
