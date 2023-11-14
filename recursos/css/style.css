@@ -248,6 +248,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   height: 30vh;
 }
 
@@ -258,6 +259,14 @@ img {
   font-size: 4vw;
   margin-left: 1vw;
   border-bottom: 0.3vw var(--color4) solid;
+  height: 5vw;
+  width: 3vw;
+}
+
+.span_espacio{
+  font-size: 4vw;
+  margin-left: 1vw;
+  border-bottom: 0.3vw var(--color1) solid;
   height: 5vw;
   width: 3vw;
 }
