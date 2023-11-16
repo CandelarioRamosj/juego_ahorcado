@@ -306,20 +306,40 @@ img {
 /* Fin section juego */
 
 /* SweetAlert2 */
+/* Mensaje de Game Over */
 .sweet-img {
   filter: invert(38%) sepia(93%) saturate(6631%) hue-rotate(329deg) brightness(100%) contrast(102%);
 }
 
 .sweet-confirm {
-  background-color: var(--color4)!important;
-  color: var(--color1)!important;
+  background-color: var(--color1)!important;
+  color: var(--color4)!important;
   font-family: var(--letraGeneral);
 }
 
 .sweet-popup {
   font-family: var(--letraGeneral);
+  background-color: var(--color4);
+  color: var(--color1);
+  border-radius: 5vh;
+}
+
+/* Mensaje de nivel completado */
+.sweet-confirm-2 {
+  background-color: var(--color4)!important;
+  color: var(--color1)!important;
+  font-family: var(--letraGeneral);
+}
+
+.sweet-popup-2 {
+  font-family: var(--letraGeneral);
   background-color: var(--color1);
   color: var(--color4);
+  border-radius: 5vh;
+  width: 25vw;
+  height: 25vw;
+  margin-bottom: 5vw;
+  margin-right: 5vw;
 }
 /* Fin SweetAlert2 */
 a {

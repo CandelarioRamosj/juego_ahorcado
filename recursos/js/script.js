@@ -157,11 +157,23 @@ function juegoDelAhorcado(categoria){
         Array.from(letras).forEach(elemento => elemento.style.pointerEvents = 'none')
         puntos = puntos + 10
         setTimeout(function() {
-          alert('Felicidades')
+          Swal.fire({
+            position: 'bottom-end',
+            backdrop: false,
+            icon: "success",
+            title: "¡Buen trabajo!",
+            confirmButtonText: 'Aceptar',
+            customClass: {
+              icon: 'sweet-img-2',
+              confirmButton: 'sweet-confirm-2',
+              popup: 'sweet-popup-2'
+            }
+          }).then((result) => {
           //Se llama a la funcion para usar la siguiente palabra
           nuevoSpan()
           //Se llama a una funcion que limpia todo
           limpiarPantalla()
+          })
         }, 100); // Espera 1 segundo antes de ejecutar el código dentro de la función
       }
     })
