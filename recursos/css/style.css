@@ -172,6 +172,7 @@ label > i:hover {
 }
 /* Fin section inicial */
 
+/* Section juego */
 #pantalla-juego {
   /*p: display: none; No funciona (no lo he revisado porque) asi que lo agrege al html */
   height: 75vh;
@@ -214,36 +215,22 @@ label > i:hover {
   font-size: 1.6vw;
   font-family: var(--letraGeneral);
 }
+
 .puntos{
   display: flex;
   font-size: 2vw;
   margin-right: 5vw;
 }
+
 #puntuacion {
   margin-left: 1vw;
 }
-.abecedario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  height: 39vh;
-}
+
 .pantalla-respuestas{
   float:left;
   width: 60%;
 }
-.ahorcado-elem{
-  display: grid;
-  place-content: center;
-  height: 92%;
-}
-img {
-  height: 30vw;
-  width: 30vw;
-}
+
 .respuesta-juego {
   display: flex;
   align-items: center;
@@ -271,6 +258,16 @@ img {
   width: 3vw;
 }
 
+.abecedario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: 39vh;
+}
+
 .letra {
   cursor: pointer;
   border: none;
@@ -296,6 +293,35 @@ img {
   border: none;
 }
 
+.ahorcado-elem{
+  display: grid;
+  place-content: center;
+  height: 92%;
+}
+
+img {
+  height: 30vw;
+  width: 30vw;
+}
+/* Fin section juego */
+
+/* SweetAlert2 */
+.sweet-img {
+  filter: invert(38%) sepia(93%) saturate(6631%) hue-rotate(329deg) brightness(100%) contrast(102%);
+}
+
+.sweet-confirm {
+  background-color: var(--color4)!important;
+  color: var(--color1)!important;
+  font-family: var(--letraGeneral);
+}
+
+.sweet-popup {
+  font-family: var(--letraGeneral);
+  background-color: var(--color1);
+  color: var(--color4);
+}
+/* Fin SweetAlert2 */
 a {
   text-decoration: none;
   color: var(--color4);

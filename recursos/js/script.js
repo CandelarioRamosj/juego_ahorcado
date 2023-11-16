@@ -132,10 +132,22 @@ function juegoDelAhorcado(categoria){
           imagenAhorcado.src = '../recursos/img/GameOver.png'
           Array.from(letras).forEach(elemento => elemento.style.pointerEvents = 'none')
           setTimeout(function(){
-            alert('Game Over')
-            btnVolver.click()
-            limpiarPantalla()
-          }, 1000)
+            //SweetAlert Error
+            Swal.fire({
+              icon: "error",
+              title: "Fin del juego",
+              text: "Puntuación: " + puntos,
+              confirmButtonText: 'Aceptar',
+              customClass: {
+                icon: 'sweet-img',
+                confirmButton: 'sweet-confirm',
+                popup: 'sweet-popup'
+              }
+            }).then((result) => {
+              btnVolver.click()
+              limpiarPantalla()
+            })
+          }, 100)
         break;
       }
 
