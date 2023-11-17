@@ -41,7 +41,7 @@ btnVolver.addEventListener('click', function(){
     title: '¿Quieres volver al menú principal?',
     showCancelButton: true,
     confirmButtonText: 'Si',
-    cancelButton: "Cancelar",
+    cancelButtonText: "Cancelar",
     customClass: {
       cancelButton: 'sweet-cancel-volver',
       confirmButton: 'sweet-confirm-volver',
@@ -162,7 +162,11 @@ function juegoDelAhorcado(categoria){
                 popup: 'sweet-popup'
               }
             }).then((result) => {
-              btnVolver.click()
+              limpiarPantalla()
+              let pantallaInicial = document.querySelector('#inicial')
+              pantallaInicial.style.display = 'block'
+              let pantallaJuego = document.querySelector('#pantalla-juego')
+              pantallaJuego.style.display = 'none'
               limpiarPantalla()
             })
           }, 100)
@@ -223,7 +227,6 @@ function juegoDelAhorcado(categoria){
   }
 
 function nuevoSpan(){
-  console.log(NuevoArray)
   //Se agregan los puntos
   document.getElementById('puntuacion').textContent = puntos
   //Se crea un numero aleatorio para extraer una palabra
@@ -233,7 +236,6 @@ function nuevoSpan(){
   //Se crea un for para poder hacer los span
   let span = ""
   for(let i = 0; i < randomElemento.length; i++){
-    console.log(i)
     if(randomElemento[i] != ' '){
       span += '<span class="span_respuesta" id="'+ i +'"></span>'
     }else{
@@ -241,7 +243,6 @@ function nuevoSpan(){
     }
   }
   //Se agrega al div
-  console.log(randomElemento + '\n' + span)
   document.querySelector('.respuesta-juego').innerHTML = span
 }
 
