@@ -37,11 +37,26 @@ btnInicial.addEventListener('click', function(){
 let btnVolver = document.querySelector('#btn-volver')
 
 btnVolver.addEventListener('click', function(){
-  limpiarPantalla()
-  let pantallaInicial = document.querySelector('#inicial')
-  pantallaInicial.style.display = 'block'
-  let pantallaJuego = document.querySelector('#pantalla-juego')
-  pantallaJuego.style.display = 'none'
+  Swal.fire({
+    title: '¿Quieres volver al menú principal?',
+    showCancelButton: true,
+    confirmButtonText: 'Si',
+    cancelButton: "Cancelar",
+    customClass: {
+      cancelButton: 'sweet-cancel-volver',
+      confirmButton: 'sweet-confirm-volver',
+      popup: 'sweet-popup-volver'
+    }
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      limpiarPantalla()
+      let pantallaInicial = document.querySelector('#inicial')
+      pantallaInicial.style.display = 'block'
+      let pantallaJuego = document.querySelector('#pantalla-juego')
+      pantallaJuego.style.display = 'none'
+    }
+  });
 })
 
 //Se declaran las variables globales para poder utilizarlas 
