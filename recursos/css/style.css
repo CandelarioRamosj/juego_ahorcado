@@ -68,7 +68,6 @@ header {
   height: 24vh;
   font-size: 3vw;
   font-family: var(--letraInicio);
-
 }
 
 .span-header {
@@ -371,3 +370,288 @@ footer {
   align-items: center;
   font-family: var(--letraGeneral);
 }
+
+/*?Tablet* *****************************************************************/
+/**Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+  header {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: 15vh;
+    font-size: 5vw;
+  }
+  
+  .span-header {
+    letter-spacing: 0.5vw;
+    border-bottom: 0.5vw var(--color3) solid;
+  }
+  
+  /* Primer section */
+  #inicial {
+    display: block;
+    height: 84.5vh;
+    border-top: 0.5vw var(--color4) solid;
+    border-bottom: 0.5vw var(--color4) solid;
+  }
+  
+  #inicial-1 {
+    height: 45%;
+  }
+  
+  #inicial-1 > h2 {
+    padding-left: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    font-size: 3.5vw;
+  }
+  
+  .categorias {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(2, 6vw);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vw;
+  }
+  
+  label > i {
+    grid-row: 1;
+    font-size: 5vw;
+    border-radius: 50%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    height: 6vw;
+    width: 10vw;
+    transition: background-color 0.3s linear, padding-top 0.2s linear, padding-bottom 0.2s linear, height 0.2s linear, width 0.2s linear;
+  }
+  
+  label > i:hover {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    height: 6vw;
+    width: 12vw;
+  }
+  
+  .i-active {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    height: 6vw;
+    width: 12vw;
+  }
+  
+  #inicial-2 {
+    height: 55%;
+    display: grid;
+    place-content: center;
+  }
+  
+  #btn-inicial {
+    height: 12vw;
+    width: 25vw;
+    border-radius: 10px;
+    border-bottom: 0.5vw #6fbcaa solid;
+    font-size: 6vw;
+    margin-bottom: 25vw;
+    box-shadow: 0 30px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+  }
+  
+  #btn-inicial:active{
+    transform: translateY(20px);
+    box-shadow: 0 15px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+  }
+  /* Fin section inicial */
+  
+  /* Section juego */
+  #pantalla-juego {
+    /*p: display: none; No funciona (no lo he revisado porque) asi que lo agrege al html */
+    height: 84.5vh;
+    border-top: 0.5vw var(--color4) solid;
+    border-bottom: 0.5vw var(--color4) solid;
+  }
+  
+  .barra-juego {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .btn-barra{
+    margin-left: 1.5vw;
+  }
+  
+  .btn-barra > button {
+    width: 6vw;
+    height: 5vw;
+    margin-left: 4vw;
+    font-size: 5vw;
+  }
+  
+  .categoria-juego{
+    margin-right: 2vw;
+    font-size: 4vw;
+  }
+  
+  .puntos{
+    display: flex;
+    font-size: 4vw;
+    margin-right: 8vw;
+  }
+  
+  #puntuacion {
+    margin-left: 2vw;
+    font-size: 3.5vw;
+  }
+  
+  .pantalla-respuestas{
+    float: none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .respuesta-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 18vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  
+  .span_respuesta {
+    text-align: center;
+    font-size: 5vw;
+    margin-left: 2vw;
+    border-bottom: 0.5vw var(--color4) solid;
+    height: 6vw;
+    width: 4vw;
+    background-color: ç;
+  }
+  
+  .span_espacio{
+    font-size: 5vw;
+    margin-left: 2vw;
+    border-bottom: 0.5vw var(--color1) solid;
+    height: 6vw;
+    width: 4vw;
+  }
+  
+  .abecedario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 25vh;
+  }
+  
+  .letra {
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .letra:hover {
+    border: 0.2vw var(--color4) solid;
+  }
+  
+  .ahorcado-elem{
+    display: grid;
+    place-content: center;
+    height: 40%;
+  }
+  
+  img {
+    height: 40vw;
+    width: 40vw;
+  }
+  /* Fin section juego */
+  
+  /* SweetAlert2 */
+  /* Mensaje de Game Over */
+  .sweet-popup {
+    font-family: var(--letraGeneral);
+    background-color: var(--color4);
+    color: var(--color1);
+    border-radius: 5vh;
+    height: 75vw;
+    width: 80vw;
+    font-size: 3vw;
+  }
+  
+  /* Mensaje de nivel completado */
+  .sweet-confirm-2 {
+    background-color: var(--color4)!important;
+    color: var(--color1)!important;
+    font-family: var(--letraGeneral);
+  }
+  
+  .sweet-popup-2 {
+    position: absolute;
+    bottom: 55vw;
+    right: 19vw;
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 5vh;
+    width: 50vw;
+    height: 50vw;
+    margin-bottom: 5vw;
+    margin-right: 5vw;
+    font-size: 2.5vw;
+  }
+  /* Mensaje de juego terminado */  
+  .sweet-popup-3 {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color5);
+    border-radius: 5vh;
+    height: 75vw;
+    width: 80vw;
+    font-size: 3vw;
+  }
+  /* Fin SweetAlert2 */
+  a {
+    text-decoration: none;
+    color: var(--color4);
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--letraGeneral);
+    font-size: 4vw;
+  }  
+}
+
+/*!landscape*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+  body{background: blue;}
+}
+/*?fin tablet*/
+
+/*?movil*/
+/*!Portrait*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+  body{background: green;}
+}
+/*!landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+  body{background: black;}
+}
+/*?fin movil*/
