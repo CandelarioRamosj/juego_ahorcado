@@ -156,6 +156,31 @@ function juegoDelAhorcado(categoria){
         //Se desactivan las letras para que no se clickee nada
         Array.from(letras).forEach(elemento => elemento.style.pointerEvents = 'none')
         puntos = puntos + 10
+        //Se crea una condicion para evaluar si ya se terminaron las palabras
+        if(NuevoArray.length < 1){
+          //Se agregan los puntos
+          document.getElementById('puntuacion').textContent = puntos
+          setTimeout(function(){
+            //SweetAlert Error
+            Swal.fire({
+              icon: "info",
+              title: "!Felicidades¡",
+              text: "Juego Completado",
+              footer: " Puntuación: " + puntos,
+              confirmButtonText: 'Aceptar',
+              customClass: {
+                icon: 'sweet-img-3',
+                confirmButton: 'sweet-confirm-3',
+                popup: 'sweet-popup-3'
+              }
+            }).then((result) => {
+              btnVolver.click()
+              //Se llama a una funcion que limpia todo
+              limpiarPantalla()
+            })
+          }, 100)
+          return
+        }
         setTimeout(function() {
           Swal.fire({
             position: 'bottom-end',

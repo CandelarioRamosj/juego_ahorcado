@@ -341,6 +341,23 @@ img {
   margin-bottom: 5vw;
   margin-right: 5vw;
 }
+/* Mensaje de juego terminado */
+.sweet-img-3 {
+  filter: invert(38%) sepia(93%) saturate(6631%) hue-rotate(329deg) brightness(100%) contrast(102%);
+}
+
+.sweet-confirm-3 {
+  background-color: var(--color5)!important;
+  color: var(--color1)!important;
+  font-family: var(--letraGeneral);
+}
+
+.sweet-popup-3 {
+  font-family: var(--letraGeneral);
+  background-color: var(--color1);
+  color: var(--color5);
+  border-radius: 5vh;
+}
 /* Fin SweetAlert2 */
 a {
   text-decoration: none;
