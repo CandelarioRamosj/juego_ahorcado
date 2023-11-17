@@ -78,7 +78,10 @@ function juegoDelAhorcado(categoria){
       NuevoArray = Cosas.slice()
       nuevoSpan()
     break;
-    case 'Aleatorio': alert('Aleatorio')
+    case 'Aleatorio':
+      //Se copia el array
+      NuevoArray = Animales.concat(Plantas, Trabajos, Cosas)
+      nuevoSpan()
     break;
   }
 }
