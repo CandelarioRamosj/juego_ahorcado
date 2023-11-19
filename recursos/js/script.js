@@ -129,22 +129,22 @@ function juegoDelAhorcado(categoria){
       //El switch controlara la imagen que se muestre
       switch(respuestaIncorrecta){
         case 0:
-          imagenAhorcado.src = '../recursos/img/JuegoInicio.png'
+          imagenAhorcado.src = 'recursos/img/JuegoInicio.png'
         break;
         case 1:
-          imagenAhorcado.src = '../recursos/img/Error1.png'
+          imagenAhorcado.src = 'recursos/img/Error1.png'
         break;
         case 2:
-          imagenAhorcado.src = '../recursos/img/Error2.png'
+          imagenAhorcado.src = 'recursos/img/Error2.png'
         break;
         case 3:
-          imagenAhorcado.src = '../recursos/img/Error3.png'
+          imagenAhorcado.src = 'recursos/img/Error3.png'
         break;
         case 4:
-          imagenAhorcado.src = '../recursos/img/Error4.png'
+          imagenAhorcado.src = 'recursos/img/Error4.png'
         break;
         case 5:
-          imagenAhorcado.src = '../recursos/img/Error5.png'
+          imagenAhorcado.src = 'recursos/img/Error5.png'
         break;
         case 6:
           imagenAhorcado.src = '../recursos/img/GameOver.png'
