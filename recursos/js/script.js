@@ -147,7 +147,7 @@ function juegoDelAhorcado(categoria){
           imagenAhorcado.src = 'recursos/img/Error5.png'
         break;
         case 6:
-          imagenAhorcado.src = '../recursos/img/GameOver.png'
+          imagenAhorcado.src = 'recursos/img/GameOver.png'
           Array.from(letras).forEach(elemento => elemento.style.pointerEvents = 'none')
           setTimeout(function(){
             //SweetAlert Error
