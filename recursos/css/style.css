@@ -1317,8 +1317,345 @@ footer {
   }
 }
 
-/*!landscape*/
+/**landscape*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
-  body{background: black;}
+  header {
+    height: 20vh;
+    font-size: 2.5vw;
+  }
+  
+  .span-header {
+    letter-spacing: 0.5vw;
+    border-bottom: 0.3vw var(--color3) solid;
+  }
+  
+  /* Primer section */
+  #inicial {
+    display: block;
+    height: 79vh;
+    border-top: 0.3vw var(--color4) solid;
+    border-bottom: 0.3vw var(--color4) solid;
+  }
+  
+  #inicial-1 {
+    height: 35%;
+  }
+  
+  #inicial-1 > h2 {
+    padding-left: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 2vw;
+    font-family: var(--letraGeneral)
+  }
+  
+  .categorias {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(5, 10vw);
+    grid-template-rows: repeat(2, 6vw);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--letraGeneral);
+    cursor: pointer;
+    font-size: 1.5vw;
+  }
+  
+  label > i {
+    grid-row: 1;
+    font-size: 3vw;
+    background-color: var(--color4);
+    margin-top: 3vw;
+    color: var(--color1);
+    border-radius: 50%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    height: 3vw;
+    width: 6vw;
+    transition: background-color 0.3s linear, padding-top 0.2s linear, padding-bottom 0.2s linear, height 0.2s linear, width 0.2s linear;
+  }
+  
+  label > i:hover {
+    background-color: var(--color5);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    height: 4vw;
+    width: 7vw;
+  }
+  
+  .i-active {
+    background-color: var(--color5);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    height: 4vw;
+    width: 7vw;
+  }
+  
+  #inicial-2 {
+    height: 65%;
+    display: grid;
+    place-content: center;
+  }
+  
+  #btn-inicial {
+    height: 5vw;
+    width: 10vw;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 0.3vw #6fbcaa solid;
+    color: var(--color1);
+    font-size: 2vw;
+    background-color: var(--color4);
+    margin-bottom: 2vw;
+    box-shadow: 0 15px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+    transition: all 0.1s linear;
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  #btn-inicial:active{
+    transform: translateY(10px);
+    box-shadow: 0 5px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+    color: var(--color5);
+  }
+  /* Fin section inicial */
+  
+  /* Section juego */
+  #pantalla-juego {
+    /*p: display: none; No funciona (no lo he revisado porque) asi que lo agrege al html */
+    height: 79vh;
+    border-top: 0.3vw var(--color4) solid;
+    border-bottom: 0.3vw var(--color4) solid;
+  }
+  
+  .barra-juego {
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .btn-barra{
+    margin-left: 1.5vw;
+  }
+  
+  .btn-barra > button {
+    width: 5vw;
+    height: 4vw;
+    margin-left: 0.5vw;
+    font-size: 3vw;
+    border: none;
+    background: none;
+    color: var(--color4);
+    cursor: pointer;
+  }
+  
+  .btn-barra > button:hover{
+    color: var(--color3);
+  }
+  
+  .btn-barra > button:active{
+    color: var(--color5);
+  }
+  
+  .categoria-juego{
+    margin-left: 6vw;
+    margin-right: 0vw;
+    font-size: 2vw;
+    font-family: var(--letraGeneral);
+  }
+  
+  .puntos{
+    display: flex;
+    font-size: 2vw;
+    margin-right: 6vw;
+  }
+  
+  #puntuacion {
+    margin-left: 1vw;
+    font-size: 2vw;
+  }
+  
+  .pantalla-respuestas{
+    float:left;
+    width: 60%;
+  }
+  
+  .respuesta-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 34vh;
+  }
+  
+  .span_respuesta {
+    font-family: var(--letraJuego);
+    text-align: center;
+    color: var(--color5);
+    font-size: 3vw;
+    margin-left: 1vw;
+    border-bottom: 0.3vw var(--color4) solid;
+    height: 4vw;
+    width: 3vw;
+  }
+  
+  .span_espacio{
+    font-size: 3vw;
+    margin-left: 1vw;
+    border-bottom: 0.3vw var(--color1) solid;
+    height: 4vw;
+    width: 3vw;
+  }
+  
+  .abecedario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 39vh;
+  }
+  
+  .letra {
+    cursor: pointer;
+    border: none;
+    background-color: var(--color4);
+    color: var(--color2);
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+    font-family: var(--letraGeneral);
+  }
+  
+  .letra:hover {
+    background-color: var(--color3);
+    color: var(--color4);
+    border: 0.2vw var(--color4) solid;
+  }
+  
+  .letra:active {
+    background-color: var(--color5);
+    color: var(--color2);
+    border: none;
+  }
+  
+  .ahorcado-elem{
+    display: flex;
+    height: 92%;
+  }
+  
+  img {
+    height: 33vw;
+    width: 33vw;
+  }
+  /* Fin section juego */
+  
+  /* SweetAlert2 */
+  /* Mensaje de Game Over */
+  .sweet-img {
+    filter: invert(38%) sepia(93%) saturate(6631%) hue-rotate(329deg) brightness(100%) contrast(102%);
+  }
+  
+  .sweet-confirm {
+    background-color: var(--color1)!important;
+    color: var(--color4)!important;
+    font-family: var(--letraGeneral);
+  }
+  
+  .sweet-popup {
+    font-family: var(--letraGeneral);
+    background-color: var(--color4);
+    color: var(--color1);
+    border-radius: 5vh;
+    width: 50vw;
+    height: 35vw;
+    font-size: 1.5vw;
+  }
+  
+  /* Mensaje de nivel completado */
+  .sweet-confirm-2 {
+    background-color: var(--color4)!important;
+    color: var(--color1)!important;
+    font-family: var(--letraGeneral);
+  }
+  
+  .sweet-popup-2 {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 5vh;
+    width: 32vw;
+    height: 32vw;
+    margin-bottom: 0vw;
+    margin-right: 3vw;
+    font-size: 1.5vw;
+  }
+  /* Mensaje de juego terminado */
+  .sweet-img-3 {
+    filter: invert(38%) sepia(93%) saturate(6631%) hue-rotate(329deg) brightness(100%) contrast(102%);
+  }
+  
+  .sweet-confirm-3 {
+    background-color: var(--color5)!important;
+    color: var(--color1)!important;
+    font-family: var(--letraGeneral);
+  }
+  
+  .sweet-popup-3 {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color5);
+    border-radius: 5vh;
+    width: 50vw;
+    height: 35vw;
+    font-size: 1.4vw;
+  }
+  /* Mensaje de volver al menu principal */
+  .sweet-cancel-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1)!important;
+    border:0.1vw var(--color5) solid !important;
+    color: var(--color5)!important;
+  }
+  
+  .sweet-confirm-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color5)!important;
+    color: var(--color1)!important;
+  }
+  
+  .sweet-popup-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color5);
+    width: 40vw;
+    border-radius: 2vh;
+    font-size: 1.5vw;
+  }
+  /* Fin SweetAlert2 */
+  a {
+    text-decoration: none;
+    color: var(--color4);
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--letraGeneral);
+    font-size: 1.5vw;
+  }
 }
 /*?fin movil*/
