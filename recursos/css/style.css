@@ -680,7 +680,7 @@ footer {
     align-items: center;
     font-family: var(--letraGeneral);
     font-size: 4vw;
-  }  
+  }
 }
 
 /**landscape*/
@@ -1028,10 +1028,295 @@ footer {
 /*?fin tablet*/
 
 /*?movil*/
-/*!Portrait*/
+/**Portrait*/
 @media (max-width: 575.98px)and (orientation:portrait) {
-  body{background: green;}
+  header {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: 20vh;
+    font-size: 5vw;
+  }
+  
+  .span-header {
+    letter-spacing: 0.5vw;
+    border-bottom: 1vw var(--color3) solid;
+  }
+  
+  /* Primer section */
+  #inicial {
+    display: block;
+    height: 79vh;
+    border-top: 1vw var(--color4) solid;
+    border-bottom: 1vw var(--color4) solid;
+  }
+  
+  #inicial-1 {
+    height: 45%;
+  }
+  
+  #inicial-1 > h2 {
+    padding-left: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 5vw;
+  }
+  
+  .categorias {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: repeat(2, 27vw);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4.5vw;
+  }
+  
+  label > i {
+    grid-row: 1;
+    font-size: 8vw;
+    border-radius: 50%;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    height: 8vw;
+    width: 16vw;
+    transition: background-color 0.3s linear, padding-top 0.2s linear, padding-bottom 0.2s linear, height 0.2s linear, width 0.2s linear;
+  }
+  
+  label > i:hover {
+    padding-top: 6vw;
+    padding-bottom: 4vw;
+    height: 10vw;
+    width: 20vw;
+  }
+  
+  .i-active {
+    padding-top: 6vw;
+    padding-bottom: 4vw;
+    height: 10vw;
+    width: 20vw;
+  }
+  
+  #inicial-2 {
+    height: 55%;
+    display: grid;
+    place-content: center;
+  }
+  
+  #btn-inicial {
+    height: 16vw;
+    width: 35vw;
+    border-radius: 10px;
+    border-bottom: 0.5vw #6fbcaa solid;
+    font-size: 9vw;
+    margin-bottom: 25vw;
+    box-shadow: 0 30px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+  }
+  
+  #btn-inicial:active{
+    transform: translateY(20px);
+    box-shadow: 0 15px 0 #1a6b6b, 1px 1px 3px #1a6b6b;
+  }
+  /* Fin section inicial */
+  
+  /* Section juego */
+  #pantalla-juego {
+    /*p: display: none; No funciona (no lo he revisado porque) asi que lo agrege al html */
+    height: 79vh;
+    border-top: 1vw var(--color4) solid;
+    border-bottom: 1vw var(--color4) solid;
+  }
+  
+  .barra-juego {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .btn-barra{
+    margin-left: 1.5vw;
+  }
+  
+  .btn-barra > button {
+    width: 6vw;
+    height: 10vw;
+    margin-left: 4vw;
+    font-size: 9vw;
+  }
+  
+  .categoria-juego{
+    margin-right: 2vw;
+    font-size: 5.5vw;
+  }
+  
+  .puntos{
+    display: flex;
+    font-size: 7vw;
+    margin-right: 8vw;
+  }
+  
+  #puntuacion {
+    margin-left: 2vw;
+    font-size: 5.5vw;
+  }
+  
+  .pantalla-respuestas{
+    float: none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .respuesta-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 18vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  
+  .span_respuesta {
+    text-align: center;
+    font-size: 8vw;
+    margin-left: 2vw;
+    border-bottom: 1vw var(--color4) solid;
+    height: 9vw;
+    width: 7vw;
+    background-color: ç;
+  }
+  
+  .span_espacio{
+    font-size: 5vw;
+    margin-left: 2vw;
+    border-bottom: 0.5vw var(--color1) solid;
+    height: 6vw;
+    width: 4vw;
+  }
+  
+  .abecedario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 25vh;
+  }
+  
+  .letra {
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+    font-size: 3.5vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .letra:hover {
+    border: 0.2vw var(--color4) solid;
+  }
+  
+  .ahorcado-elem{
+    display: grid;
+    place-content: center;
+    height: 40%;
+  }
+  
+  img {
+    height: 60vw;
+    width: 60vw;
+  }
+  /* Fin section juego */
+  
+  /* SweetAlert2 */
+  /* Mensaje de Game Over */
+  .sweet-popup {
+    font-family: var(--letraGeneral);
+    background-color: var(--color4);
+    color: var(--color1);
+    border-radius: 5vh;
+    height: 75vw;
+    width: 80vw;
+    font-size: 3.5vw;
+  }
+  
+  /* Mensaje de nivel completado */
+  .sweet-confirm-2 {
+    background-color: var(--color4)!important;
+    color: var(--color1)!important;
+    font-family: var(--letraGeneral);
+  }
+  
+  .sweet-popup-2 {
+    position: absolute;
+    bottom: 90vw;
+    right: 15vw;
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 5vh;
+    width: 60vw;
+    height: 60vw;
+    margin-bottom: 5vw;
+    margin-right: 5vw;
+    font-size: 3.4vw;
+  }
+  /* Mensaje de juego terminado */  
+  .sweet-popup-3 {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color5);
+    border-radius: 5vh;
+    height: 75vw;
+    width: 80vw;
+    font-size: 3vw;
+  }
+  /* Mensaje de volver al menu principal */
+  .sweet-cancel-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1)!important;
+    border:0.1vw var(--color5) solid !important;
+    color: var(--color5)!important;
+  }
+
+  .sweet-confirm-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color5)!important;
+    color: var(--color1)!important;
+  }
+
+  .sweet-popup-volver {
+    font-family: var(--letraGeneral);
+    background-color: var(--color1);
+    color: var(--color5);
+    font-size: 3.5vw;
+    width: 70vw;
+    border-radius: 2vh;
+  }
+  /* Fin SweetAlert2 */
+  a {
+    text-decoration: none;
+    color: var(--color4);
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--letraGeneral);
+    font-size: 5vw;
+  }
 }
+
 /*!landscape*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
   body{background: black;}
