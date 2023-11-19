@@ -167,7 +167,6 @@ function juegoDelAhorcado(categoria){
               pantallaInicial.style.display = 'block'
               let pantallaJuego = document.querySelector('#pantalla-juego')
               pantallaJuego.style.display = 'none'
-              limpiarPantalla()
             })
           }, 100)
         break;
@@ -196,9 +195,11 @@ function juegoDelAhorcado(categoria){
                 popup: 'sweet-popup-3'
               }
             }).then((result) => {
-              btnVolver.click()
-              //Se llama a una funcion que limpia todo
               limpiarPantalla()
+              let pantallaInicial = document.querySelector('#inicial')
+              pantallaInicial.style.display = 'block'
+              let pantallaJuego = document.querySelector('#pantalla-juego')
+              pantallaJuego.style.display = 'none'
             })
           }, 100)
           return
