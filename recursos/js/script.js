@@ -255,5 +255,5 @@ function limpiarPantalla(){
   respuestaCorrecta = 0
   respuestaIncorrecta = 0
   //Se reinicia la imagen
-  imagenAhorcado.src = '../recursos/img/JuegoInicio.png'
+  imagenAhorcado.src = 'recursos/img/JuegoInicio.png'
 }
